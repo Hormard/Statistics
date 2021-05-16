@@ -78,5 +78,24 @@
     .header {
         justify-content: center;
         padding: 34px 20px 0px;
+
+        &__info {
+            justify-content: center;
+            padding-right: 10px;
+        }
+
+        &__info-title {
+            margin-bottom: 10px;
+            padding-right: 20px;
+        }
+    }
+
+    .graphic__heading {
+        width: 600px;
+    
+    }
+
+    .graphic__heading-title {
+        padding-right: 109px;
     }
 }

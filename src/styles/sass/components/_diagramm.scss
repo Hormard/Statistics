@@ -1,4 +1,36 @@
 .diagramm {
     grid-area: diagramm;
-    background: #ffff00;
+    padding: 20px;
+    background: #FDFDFF;
+    box-sizing: border-box;
+
+    &__title {
+        margin-bottom: 24px;
+        font-size: 20px;
+        color: #4F4F4F
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__parts {
+        padding-top: 22px;
+    }
+
+    &__parts-name {
+        margin-bottom: 5px;
+        padding-left: 25px;
+        font-size: 14px;
+        color: #4F4F4F;
+    }
+
+    &__parts-name--pink-square {
+        background: url(../../img/icons/pink-square.png) no-repeat;
+    }
+
+    &__parts-name--purple-square {
+        background: url(../../img/icons/purple-squre.png) no-repeat;
+    }
 }
