@@ -1,0 +1,82 @@
+@media (max-width: 1024px) {
+    .wrap {
+        padding: 0;
+    }
+
+    .app {
+        flex-direction: column;
+        border: none;
+    }
+
+    .nav {
+        display: block;
+        padding: 0;
+
+        &__link {
+            display: none;
+        }
+
+        &__logo-link {
+            display: none;
+        }
+
+        &__label {
+            display: none;
+        }
+
+        &__menu-btn {
+            display: block;
+        }
+    }
+
+    .main {
+        width: 100%;
+        grid-template-rows: repeat(2, 148px) repeat(3, 242px);
+        grid-template-columns: repeat(2, 341px);
+        grid-template-areas:
+        "card card"
+        "card card"
+        "graphic graphic"
+        "diagramm geo"
+        "gistogramm gistogramm";
+        justify-content: center;
+    }
+
+    .card {
+        grid-row: span 1;
+    }
+
+    .ad {
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+}    
+
+@media (max-width: 568px) {
+    .main {
+        padding: 15px 0px 15px 0px;
+        grid-template-rows: repeat(3, 148px) repeat(4, 242px);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "card"
+        "card"
+        "card"
+        "graphic"
+        "diagramm"
+        "gistogramm"
+        "geo";
+    }
+
+    .ad {
+        display: none;
+    }
+
+    .header {
+        justify-content: center;
+        padding: 34px 20px 0px;
+    }
+}

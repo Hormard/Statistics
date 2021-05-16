@@ -1,0 +1,15 @@
+// Base
+@import 'config/_normalize.scss';
+@import 'config/_base.scss';
+
+//Components
+
+@import 'components/_nav.scss';
+@import 'components/_header.scss';
+@import 'components/_card.scss';
+@import 'components/_diagramm.scss';
+@import 'components/_graphic.scss';
+@import 'components/_gistogramm.scss';
+@import 'components/_geo.scss';
+// Media 
+@import 'config/_media';

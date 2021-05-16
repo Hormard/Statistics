@@ -1,0 +1,149 @@
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 98px;
+    grid-template-rows: 1fr repeat(7, 50px) 1fr;
+    grid-template-areas: 
+    "logo"
+    "link"
+    "link"
+    "link"
+    "link"
+    "link"
+    "link"
+    "link"
+    "checkbox" ;
+    padding: 53px 0px 48px ;
+    background: #FDFDFF;
+    border-radius: 14px 0 0 14px;
+
+    &__logo-link {
+        grid-area: logo;
+        justify-self: center;
+        width: 42px;
+        height: 24px;
+    }
+
+    &__vk-logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        grid-area: link;
+        grid-row: span 1;
+        justify-self: center;
+        align-self: center;
+        width: 25px;
+        height: 25px;
+    }
+
+    &__link:hover::before {
+        content: '';
+        position: absolute;
+        top: calc(-7px);
+        left: calc(-37px);
+        width: 4px;
+        height: 50px;
+        background: #7F7FD5;
+        border-radius: 0px 15px 15px;
+    }
+
+    &__link-icon {
+        width: 100%;
+        height: 100%;
+        fill: #DFE6F1;
+    }
+
+    &__link-icon:hover {
+        fill: #7F7FD5;
+    }
+
+    &__label {
+        justify-self: center;
+        align-self: flex-end;
+        cursor: pointer;
+    }
+
+    &__checkbox {
+        display: none;
+        visibility: hidden;
+    }
+
+    &__check {
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 30px;
+        font-weight: bold;
+        color: #7F7FD5;
+        border: 0.5px solid #4F4F4F;
+        border-radius: 50px;
+        box-sizing: border-box;
+        overflow: hidden;   
+    }
+
+    &__check::before {
+        content: 'Bruh';
+        position: absolute;
+        top: 5px;
+        left: calc(-36px);
+        transition: 2s;
+    }
+
+    &__checkbox:checked ~ &__check::before {
+        transform: translateX(46px);
+    }
+
+    &__check::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 8px;
+        width: 20px;
+        height: 20px;
+        background: #7F7FD5 url(../../img/icons/crescent.png) no-repeat center;
+        border-radius: 50%;
+        transition: 1.5s;
+    }
+
+    &__checkbox:checked ~ &__check::after {
+        transform: translateX(50px);
+    }
+
+    &__menu-btn {
+        position: relative;
+        display: none;
+        width: 60px;
+        height: 61px;
+        background: #E6E6E6;
+        cursor: pointer;
+    }
+    
+    &__menu-lines,
+    &__menu-lines::before,
+    &__menu-lines::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background: #48555B;
+    }
+    
+    &__menu-lines {
+        top: 18px;
+        left: 10px;
+    }
+    
+    &__menu-lines::before {
+        top: 12px;
+    }
+    
+    &__menu-lines::after {
+        top: 24px;
+    }
+}
