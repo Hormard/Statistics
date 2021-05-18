@@ -2,7 +2,7 @@
 .nav {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 99;
     display: grid;
     grid-template-columns: 98px;
     grid-template-rows: 1fr repeat(7, 50px) 1fr;

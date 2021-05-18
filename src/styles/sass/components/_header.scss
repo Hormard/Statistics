@@ -39,6 +39,7 @@
 
     &__user-name {
         position: relative;
+        z-index: 4;
         padding-right: 11px;
         @include text ($TITLE_SIZE, $TITLE_WEIGHT);
     }
