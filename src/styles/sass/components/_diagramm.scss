@@ -1,8 +1,7 @@
+// Diagramm
 .diagramm {
     grid-area: diagramm;
-    padding: 20px;
-    background: #FDFDFF;
-    box-sizing: border-box;
+    @include cell ();
 
     &__title {
         margin-bottom: 24px;
@@ -20,17 +19,19 @@
     }
 
     &__parts-name {
+        position: relative;
         margin-bottom: 5px;
         padding-left: 25px;
-        font-size: 14px;
-        color: #4F4F4F;
+        @include text ($TEXT_SIZE, $TEXT_WEIGHT);
     }
 
-    &__parts-name--pink-square {
-        background: url(../../img/icons/pink-square.png) no-repeat;
+    &__parts-name--pink-square::before {
+        content: '';
+        @include squre ($PINK-SQUARE)
     }
 
-    &__parts-name--purple-square {
-        background: url(../../img/icons/purple-squre.png) no-repeat;
+    &__parts-name--purple-square::before {
+        content: '';
+        @include squre ($PURPLE_SQURE)
     }
 }

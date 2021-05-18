@@ -1,3 +1,4 @@
+// Navigation
 .nav {
     position: sticky;
     top: 0;
@@ -17,6 +18,7 @@
     "checkbox" ;
     padding: 53px 0px 48px ;
     background: #FDFDFF;
+    border: 1px solid #EFF3F9;
     border-radius: 14px 0 0 14px;
 
     &__logo-link {

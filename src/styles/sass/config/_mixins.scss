@@ -1,0 +1,33 @@
+@mixin cell ($PRIMARY_PADDING:24px, $BACKGROUND_CELL: #FDFDFF, $PRIMARY_RADIUS: 14px) {
+   padding: $PRIMARY_PADDING;
+   background: $BACKGROUND_CELL;
+   border-radius: $PRIMARY_RADIUS;
+   box-sizing: border-box;
+}
+
+@mixin text ($SIZE: 30px, $WEIGHT: 700) {
+    font-size: $SIZE;
+    font-weight: $WEIGHT;
+    color: #4F4F4F;   
+}
+
+@mixin squre ($BACKGROUND_COLOR) {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0px;
+    background: $BACKGROUND_COLOR;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+@mixin switch ($TOP, $LEFT) {
+    content: '';
+    position: absolute;
+    top: $TOP;
+    left: $LEFT;
+    width: 10px;
+    height: 6px;
+    background: url(../../img/icons/switch.svg) no-repeat;
+    cursor: pointer;
+}

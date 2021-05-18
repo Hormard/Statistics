@@ -1,36 +1,43 @@
+// Graphic
 .graphic {
     grid-area: graphic;
-    padding: 20px;
-    background: #FDFDFF;
-    box-sizing: border-box;
+    @include cell ();
     overflow-x: scroll;
+
 
     &__heading {
         display: flex;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 24px;
     }
 
     &__heading-title {
-        padding-right: 160px;
-        font-size: 20px;
-        color: #4F4F4F;
+        @include text ($TITLE_SIZE, $TITLE_WEIGHT);
     }
 
-    &__heading-date {
-        padding-right: 32px;
-        font-size: 14px;
-        color: #4F4F4F;
+    &__info {
+        display: flex;
+        justify-content: space-between;
     }
 
-    &__heading-checkbox {
+    &__info-date {
+        position: relative;
+        padding-right: 70px;
+        @include text ($TEXT_SIZE, $TEXT_WEIGHT);
+    }
+
+    &__info-date::after {
+        @include switch (6px, 170px)
+    }
+
+    &__info-checkbox {
         margin-right: 6px;
     }
 
-    &__heading-label {
+    &__info-label {
         padding-right: 10px;
-        font-size: 14px;
-        color: #4F4F4F;
+        @include text ($TEXT_SIZE, $TEXT_WEIGHT);
     }
 
     &__content-img {

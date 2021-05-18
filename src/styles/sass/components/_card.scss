@@ -1,12 +1,11 @@
+// Cards
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     grid-area: card;
     grid-column: span 1;
-    padding: 24px;
-    background: #FDFDFF;
-    box-sizing: border-box;
+    @include cell ();
 
     &__heading {
         display: flex;
@@ -15,8 +14,7 @@
     }
 
     &__heading-title {
-        font-size: 20px;
-        color: #4F4F4F;
+        @include text ($TITLE_SIZE, $TITLE_WEIGHT);
     }
 
     &__info {
@@ -40,7 +38,7 @@
 
 .ad {
     display: none;
+    @include cell ($PRIMARY_PADDING, $BACKGROUND_CELL, $PRIMARY_RADIUS);
     text-align: center;
-    background: #FDFDFF;
     text-transform: uppercase;
 }

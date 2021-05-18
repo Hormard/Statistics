@@ -1,10 +1,9 @@
+// Gistogramm
 .gistogramm {
     grid-area: gistogramm;
-    padding: 20px;
-    background: #FDFDFF;
+    @include cell ();
     overflow-x: scroll;
-    box-sizing: border-box;
-
+    
     &__heading {
         display: flex;
         align-items: center;
@@ -13,8 +12,7 @@
     }
 
     &__heading-title {
-        font-size: 20px;
-        color: #4F4F4F;
+        @include text ($TITLE_SIZE, $TITLE_WEIGHT);
     }
 
     &__gender {
@@ -22,18 +20,20 @@
     }
 
     &__gender-text {
+        position: relative;
         padding-right: 10px;
         padding-left: 25px;
-        font-size: 14px;
-        color: #4F4F4F;
+        @include text ($TEXT_SIZE, $TEXT_WEIGHT);
     }
 
-    &__gender-text--pink-square {
-        background: url(../../img/icons/pink-square.png) no-repeat;
+    &__gender-text--pink-square::before {
+        content: '';
+        @include squre ($PINK-SQUARE);
     }
 
-    &__gender-text--purple-square {
-        background: url(../../img/icons/purple-squre.png) no-repeat;
+    &__gender-text--purple-square::before {
+        content: '';
+        @include squre ($PURPLE_SQURE);
     }
 
     &__img {
