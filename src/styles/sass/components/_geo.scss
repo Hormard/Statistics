@@ -21,7 +21,6 @@
         padding-left: 10px;
         @include text ($TEXT_SIZE, $TEXT_WEIGHT);
         color: #979797;
-        box-sizing: border-box;
         cursor: pointer;
     }
 

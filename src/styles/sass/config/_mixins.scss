@@ -2,7 +2,6 @@
    padding: $PRIMARY_PADDING;
    background: $BACKGROUND_CELL;
    border-radius: $PRIMARY_RADIUS;
-   box-sizing: border-box;
 }
 
 @mixin text ($SIZE: 30px, $WEIGHT: 700) {
@@ -17,7 +16,6 @@
     height: 16px;
     left: 0px;
     background: $BACKGROUND_COLOR;
-    box-sizing: border-box;
     border-radius: 5px;
 }
 
