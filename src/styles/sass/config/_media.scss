@@ -53,7 +53,7 @@
 
     .main {
         grid-template-rows: repeat(2, 148px) repeat(3, 242px);
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(341px, 1fr));
         grid-template-areas:
         "card card"
         "card card"
